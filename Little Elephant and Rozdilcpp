@@ -1,0 +1,31 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{  
+    int n,a=0;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    cin>>arr[i];
+    int minn=arr[0];
+    for(int i=0;i<n;i++)
+    {
+        minn=min(minn,arr[i]);
+    }
+    for(int i=0;i<n;i++)
+    {
+        if(minn==arr[i])
+        a++;
+    }
+    if(a>1)
+    cout<<"Still Rozdil";
+    else if(a==1)
+    {
+        for(int i=0;i<n;i++)
+    {
+        if(minn==arr[i])
+        cout<<i+1;
+    }
+    }
+  return 0;
+}
